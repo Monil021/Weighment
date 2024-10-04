@@ -1,0 +1,412 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2024-06-14 16:06:26.419584",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "item_code",
+  "column_break_ysvg",
+  "item_name",
+  "is_weighable_item",
+  "section_break_mtob",
+  "description",
+  "gst_hsn_code",
+  "item_group",
+  "brand",
+  "section_break_bgfj",
+  "is_ineligible_for_itc",
+  "section_break_ewfo",
+  "qty",
+  "stock_uom",
+  "column_break_izdm",
+  "uom",
+  "conversion_factor",
+  "stock_qty",
+  "section_break_ckzg",
+  "received_quantity",
+  "column_break_uqbn",
+  "accepted_quantity",
+  "column_break_hjpv",
+  "rejected_quantity",
+  "billed_received_and_returned_section",
+  "actual_received_qty",
+  "section_break_indj",
+  "rate",
+  "item_tax_template",
+  "column_break_mfqh",
+  "amount",
+  "gst_treatment",
+  "column_break_zkho",
+  "rate_company_currency",
+  "amount_company_currency",
+  "item_weight_details_section",
+  "weight_per_unit",
+  "total_weight",
+  "column_break_iixf",
+  "weight_uom",
+  "section_break_dmlp",
+  "warehouse",
+  "references_section",
+  "material_request",
+  "material_request_item",
+  "column_break_bulc",
+  "purchase_order",
+  "purchase_order_item",
+  "column_break_kiuw",
+  "purchase_receipt_item",
+  "column_break_xkaq",
+  "delivery_note",
+  "delivery_note_item",
+  "section_break_eviw",
+  "expense_account",
+  "column_break_dfdg",
+  "branch",
+  "cost_center"
+ ],
+ "fields": [
+  {
+   "columns": 2,
+   "fieldname": "item_code",
+   "fieldtype": "Autocomplete",
+   "in_list_view": 1,
+   "label": "Item Code",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_ysvg",
+   "fieldtype": "Column Break"
+  },
+  {
+   "columns": 3,
+   "fieldname": "item_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Item Name",
+   "read_only": 1
+  },
+  {
+   "fieldname": "section_break_mtob",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "description",
+   "fieldtype": "Text Editor",
+   "label": "Description",
+   "read_only": 1
+  },
+  {
+   "fieldname": "item_group",
+   "fieldtype": "Autocomplete",
+   "label": "Item Group",
+   "read_only": 1
+  },
+  {
+   "fieldname": "brand",
+   "fieldtype": "Autocomplete",
+   "label": "Brand",
+   "read_only": 1
+  },
+  {
+   "fieldname": "section_break_bgfj",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "section_break_ewfo",
+   "fieldtype": "Section Break"
+  },
+  {
+   "allow_on_submit": 1,
+   "columns": 1,
+   "fieldname": "qty",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "PO Qty",
+   "read_only": 1
+  },
+  {
+   "fieldname": "stock_uom",
+   "fieldtype": "Autocomplete",
+   "label": "Stock UOM",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_izdm",
+   "fieldtype": "Column Break"
+  },
+  {
+   "columns": 1,
+   "fieldname": "uom",
+   "fieldtype": "Autocomplete",
+   "in_list_view": 1,
+   "label": "UOM"
+  },
+  {
+   "fieldname": "conversion_factor",
+   "fieldtype": "Float",
+   "label": "Conversion Factor",
+   "read_only": 1
+  },
+  {
+   "fieldname": "section_break_indj",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "rate",
+   "fieldtype": "Currency",
+   "label": "Rate",
+   "read_only": 1
+  },
+  {
+   "fieldname": "amount",
+   "fieldtype": "Currency",
+   "label": "Amount",
+   "options": "Company:company:default_currency",
+   "read_only": 1
+  },
+  {
+   "fieldname": "item_tax_template",
+   "fieldtype": "Autocomplete",
+   "label": "Item Tax Template",
+   "read_only": 1
+  },
+  {
+   "fieldname": "gst_treatment",
+   "fieldtype": "Autocomplete",
+   "label": "GST Treatment",
+   "options": "Taxable\nZero-Rated\nNil-Rated\nExempted\nNon-GST",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_zkho",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "rate_company_currency",
+   "fieldtype": "Currency",
+   "label": "Rate (Company Currency)",
+   "read_only": 1
+  },
+  {
+   "fieldname": "amount_company_currency",
+   "fieldtype": "Currency",
+   "label": "Amount (Company Currency)",
+   "read_only": 1
+  },
+  {
+   "fieldname": "section_break_ckzg",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_uqbn",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_hjpv",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "weight_per_unit",
+   "fieldtype": "Float",
+   "label": "Weight Per Unit",
+   "read_only": 1
+  },
+  {
+   "fieldname": "total_weight",
+   "fieldtype": "Float",
+   "label": "Total Weight",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_iixf",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "weight_uom",
+   "fieldtype": "Autocomplete",
+   "label": "Weight UOM",
+   "read_only": 1
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "item_weight_details_section",
+   "fieldtype": "Section Break",
+   "label": "Item Weight Details"
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "references_section",
+   "fieldtype": "Section Break",
+   "label": "References"
+  },
+  {
+   "fieldname": "material_request",
+   "fieldtype": "Autocomplete",
+   "label": "Material Request",
+   "read_only": 1
+  },
+  {
+   "fieldname": "material_request_item",
+   "fieldtype": "Autocomplete",
+   "label": "Material Request Item",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_bulc",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "purchase_order",
+   "fieldtype": "Autocomplete",
+   "label": "Purchase Order",
+   "read_only": 1
+  },
+  {
+   "fieldname": "purchase_order_item",
+   "fieldtype": "Autocomplete",
+   "label": "Purchase Order Item",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_kiuw",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "purchase_receipt_item",
+   "fieldtype": "Autocomplete",
+   "label": "Purchase Receipt Item",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_xkaq",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "delivery_note",
+   "fieldtype": "Autocomplete",
+   "label": "Delivery Note",
+   "read_only": 1
+  },
+  {
+   "fieldname": "delivery_note_item",
+   "fieldtype": "Autocomplete",
+   "label": "Delivery Note Item",
+   "read_only": 1
+  },
+  {
+   "fieldname": "section_break_eviw",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_dfdg",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "branch",
+   "fieldtype": "Autocomplete",
+   "label": "Branch",
+   "read_only": 1
+  },
+  {
+   "fieldname": "cost_center",
+   "fieldtype": "Autocomplete",
+   "label": "Cost Center",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_mfqh",
+   "fieldtype": "Column Break"
+  },
+  {
+   "allow_on_submit": 1,
+   "default": "0",
+   "fieldname": "is_ineligible_for_itc",
+   "fieldtype": "Check",
+   "label": "Is Ineligible For Input Tax Credit",
+   "read_only": 1
+  },
+  {
+   "fieldname": "stock_qty",
+   "fieldtype": "Float",
+   "label": "Quantity As Per Stock UOM",
+   "read_only": 1
+  },
+  {
+   "fieldname": "gst_hsn_code",
+   "fieldtype": "Autocomplete",
+   "label": "HSN/SAC",
+   "read_only": 1
+  },
+  {
+   "fieldname": "expense_account",
+   "fieldtype": "Autocomplete",
+   "label": "Expense Account",
+   "read_only": 1
+  },
+  {
+   "fieldname": "actual_received_qty",
+   "fieldtype": "Float",
+   "label": "Actual Received Qty",
+   "read_only": 1
+  },
+  {
+   "fieldname": "billed_received_and_returned_section",
+   "fieldtype": "Section Break",
+   "label": "Billed, Received & Returned"
+  },
+  {
+   "allow_on_submit": 1,
+   "columns": 1,
+   "fieldname": "received_quantity",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Received Qty",
+   "read_only": 1
+  },
+  {
+   "allow_on_submit": 1,
+   "columns": 1,
+   "fieldname": "accepted_quantity",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Accepted Qty",
+   "precision": "2"
+  },
+  {
+   "columns": 1,
+   "fieldname": "rejected_quantity",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Rejected Qty"
+  },
+  {
+   "default": "0",
+   "fieldname": "is_weighable_item",
+   "fieldtype": "Check",
+   "label": " Is Weighable Item"
+  },
+  {
+   "fieldname": "section_break_dmlp",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "warehouse",
+   "fieldtype": "Autocomplete",
+   "label": "Target Warehouse",
+   "read_only": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2024-09-26 12:45:32.266249",
+ "modified_by": "Administrator",
+ "module": "Weighment Client",
+ "name": "Purchase Details",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

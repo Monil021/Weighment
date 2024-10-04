@@ -1,0 +1,46 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2024-09-29 17:52:16.293811",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "enter_weighment_id",
+  "get_print"
+ ],
+ "fields": [
+  {
+   "fieldname": "get_print",
+   "fieldtype": "Button",
+   "label": "Get Print"
+  },
+  {
+   "fieldname": "enter_weighment_id",
+   "fieldtype": "Data",
+   "label": "Enter Weighment ID"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "issingle": 1,
+ "links": [],
+ "modified": "2024-09-29 17:56:30.279359",
+ "modified_by": "Administrator",
+ "module": "Weighment",
+ "name": "Weighment Slip Reprint",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "print": 1,
+   "read": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

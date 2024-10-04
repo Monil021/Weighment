@@ -1,0 +1,88 @@
+{
+ "actions": [
+  {
+   "action": "app/card-details",
+   "action_type": "Route",
+   "label": "Card Details"
+  }
+ ],
+ "allow_rename": 1,
+ "creation": "2024-01-22 17:22:01.704521",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "card_details_section",
+  "card_number",
+  "generate_new_number",
+  "column_break_rtxyv",
+  "status",
+  "read",
+  "write"
+ ],
+ "fields": [
+  {
+   "fieldname": "card_number",
+   "fieldtype": "Data",
+   "label": "Card Number",
+   "read_only": 1
+  },
+  {
+   "fieldname": "read",
+   "fieldtype": "Button",
+   "label": "Read"
+  },
+  {
+   "fieldname": "column_break_rtxyv",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "\nBlank\nIssued\nAssigned",
+   "read_only": 1
+  },
+  {
+   "depends_on": "eval:doc.card_number",
+   "fieldname": "write",
+   "fieldtype": "Button",
+   "label": "Write"
+  },
+  {
+   "fieldname": "generate_new_number",
+   "fieldtype": "Button",
+   "label": "Generate New Number"
+  },
+  {
+   "fieldname": "card_details_section",
+   "fieldtype": "Section Break",
+   "label": "Card Details"
+  }
+ ],
+ "hide_toolbar": 1,
+ "index_web_pages_for_search": 1,
+ "issingle": 1,
+ "links": [],
+ "modified": "2024-04-18 16:31:18.205427",
+ "modified_by": "Administrator",
+ "module": "Weighment Client",
+ "name": "Card Read Write",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "print": 1,
+   "read": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

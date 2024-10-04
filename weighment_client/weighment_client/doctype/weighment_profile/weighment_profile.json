@@ -1,0 +1,440 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2024-02-16 12:36:07.889452",
+ "default_view": "List",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "tab_2_tab",
+  "details_section",
+  "weighment_server_url",
+  "is_enabled",
+  "column_break_ykjw",
+  "last_sync_date",
+  "enable_maintanance_mode",
+  "api_details_section",
+  "weighment_server_api_details_column",
+  "api_key",
+  "api_secret",
+  "section_break_rnpv",
+  "location",
+  "branch_details",
+  "weighbridge_settings_tab",
+  "weighbridge_details_section",
+  "weighbridge_details_column",
+  "baud_rate",
+  "fetch_baud_rate",
+  "get_string_order",
+  "string_order",
+  "wake_up_weight",
+  "column_break_kywi",
+  "_baud_rate",
+  "check_bell_switch_status",
+  "port_description_section",
+  "read_port",
+  "reset_ports",
+  "column_break_jkgf",
+  "weighbridge_port",
+  "bell_switch_port",
+  "weight_uom_details_section",
+  "update_conversion_table",
+  "weighbridge_uom",
+  "uom_conversion",
+  "table_updated",
+  "gate_entry_settings_tab",
+  "audio_settings_tab",
+  "update_audio_profiles",
+  "audio_file_details",
+  "printer_settings_tab",
+  "enable_printing",
+  "section_break_cbkg",
+  "product_id",
+  "add_permission",
+  "column_break_axzn",
+  "vendor_id",
+  "camera_settings_tab",
+  "section_break_xylf",
+  "camera_details",
+  "smart_card_settings_tab",
+  "settings_section",
+  "smartcard_timeout",
+  "system_settings_tab",
+  "section_break_plcy",
+  "ip_address_settings_column",
+  "system_ip_address",
+  "fetch_ip_address",
+  "administrator_control_panel_column",
+  "administrator_user",
+  "fetch_admin",
+  "administrator_password",
+  "check_password",
+  "tab_10_tab"
+ ],
+ "fields": [
+  {
+   "fieldname": "tab_2_tab",
+   "fieldtype": "Tab Break",
+   "label": "Details"
+  },
+  {
+   "fieldname": "details_section",
+   "fieldtype": "Section Break",
+   "label": "Details"
+  },
+  {
+   "fieldname": "weighment_server_url",
+   "fieldtype": "Data",
+   "label": "Weighment Server URL"
+  },
+  {
+   "default": "0",
+   "fieldname": "is_enabled",
+   "fieldtype": "Check",
+   "label": "Is Enabled"
+  },
+  {
+   "fieldname": "column_break_ykjw",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "last_sync_date",
+   "fieldtype": "Datetime",
+   "hidden": 1,
+   "label": "Last Sync Date"
+  },
+  {
+   "fieldname": "weighbridge_settings_tab",
+   "fieldtype": "Tab Break",
+   "label": "Weighbridge Settings"
+  },
+  {
+   "fieldname": "camera_settings_tab",
+   "fieldtype": "Tab Break",
+   "label": "Camera Settings"
+  },
+  {
+   "fieldname": "smart_card_settings_tab",
+   "fieldtype": "Tab Break",
+   "label": "Smart Card Settings"
+  },
+  {
+   "fieldname": "system_settings_tab",
+   "fieldtype": "Tab Break",
+   "label": "System Settings"
+  },
+  {
+   "fieldname": "system_ip_address",
+   "fieldtype": "Data",
+   "label": " System IP Address ",
+   "read_only": 1
+  },
+  {
+   "fieldname": "fetch_ip_address",
+   "fieldtype": "Button",
+   "label": "Fetch IP Address"
+  },
+  {
+   "fieldname": "administrator_user",
+   "fieldtype": "Data",
+   "label": "Administrator User",
+   "read_only": 1
+  },
+  {
+   "fieldname": "fetch_admin",
+   "fieldtype": "Button",
+   "label": "Fetch Admin "
+  },
+  {
+   "depends_on": "administrator_user",
+   "description": "Enter The Password for Above Administrator User",
+   "fieldname": "administrator_password",
+   "fieldtype": "Password",
+   "label": "Administrator Password",
+   "mandatory_depends_on": "administrator_user"
+  },
+  {
+   "fieldname": "check_password",
+   "fieldtype": "Button",
+   "label": "Check Password"
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "api_details_section",
+   "fieldtype": "Section Break",
+   "label": "API Details"
+  },
+  {
+   "fieldname": "api_key",
+   "fieldtype": "Data",
+   "label": "API Key"
+  },
+  {
+   "fieldname": "api_secret",
+   "fieldtype": "Password",
+   "label": "API Secret"
+  },
+  {
+   "fieldname": "gate_entry_settings_tab",
+   "fieldtype": "Tab Break",
+   "label": "Gate Entry Settings"
+  },
+  {
+   "fieldname": "weighbridge_details_section",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "wake_up_weight",
+   "fieldtype": "Float",
+   "label": "Wake Up Weight (KG)"
+  },
+  {
+   "description": "(Weighbridge Baud Rate)",
+   "fieldname": "baud_rate",
+   "fieldtype": "Int",
+   "label": "Baud Rate"
+  },
+  {
+   "fieldname": "string_order",
+   "fieldtype": "Data",
+   "label": "String Order"
+  },
+  {
+   "fieldname": "column_break_kywi",
+   "fieldtype": "Column Break",
+   "label": "Bell Switch Details"
+  },
+  {
+   "fieldname": "administrator_control_panel_column",
+   "fieldtype": "Column Break",
+   "label": "Administrator Control Panel"
+  },
+  {
+   "fieldname": "section_break_plcy",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "ip_address_settings_column",
+   "fieldtype": "Column Break",
+   "label": "IP Address Settings"
+  },
+  {
+   "fieldname": "section_break_xylf",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "camera_details",
+   "fieldtype": "Table",
+   "label": "Camera Details",
+   "options": "Camera Setting Details"
+  },
+  {
+   "fieldname": "get_string_order",
+   "fieldtype": "Button",
+   "label": "Get String Order"
+  },
+  {
+   "fieldname": "settings_section",
+   "fieldtype": "Section Break",
+   "label": "Settings"
+  },
+  {
+   "fieldname": "smartcard_timeout",
+   "fieldtype": "Float",
+   "label": "Smartcard Timeout ",
+   "precision": "1"
+  },
+  {
+   "fieldname": "audio_settings_tab",
+   "fieldtype": "Tab Break",
+   "label": "Audio Settings"
+  },
+  {
+   "allow_bulk_edit": 1,
+   "fieldname": "audio_file_details",
+   "fieldtype": "Table",
+   "label": "Audio File Details",
+   "options": "Audio File Details"
+  },
+  {
+   "fieldname": "weighment_server_api_details_column",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "port_description_section",
+   "fieldtype": "Section Break",
+   "label": "Port Description"
+  },
+  {
+   "description": "(Port)",
+   "fieldname": "weighbridge_port",
+   "fieldtype": "Data",
+   "label": "Weighbridge Port",
+   "read_only": 1
+  },
+  {
+   "description": "(Port)",
+   "fieldname": "bell_switch_port",
+   "fieldtype": "Data",
+   "label": "Bell Switch Port",
+   "read_only": 1
+  },
+  {
+   "fieldname": "read_port",
+   "fieldtype": "Button",
+   "label": "Read Port"
+  },
+  {
+   "fieldname": "column_break_jkgf",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "weighbridge_details_column",
+   "fieldtype": "Column Break",
+   "label": "Weighbridge Details"
+  },
+  {
+   "description": "Default Baud Rate Of Bell Switch Are 9600",
+   "fieldname": "_baud_rate",
+   "fieldtype": "Int",
+   "label": "Baud Rate (Bell Switch)"
+  },
+  {
+   "fieldname": "fetch_baud_rate",
+   "fieldtype": "Button",
+   "hidden": 1,
+   "label": "Fetch Baud rate"
+  },
+  {
+   "fieldname": "weighbridge_uom",
+   "fieldtype": "Autocomplete",
+   "label": "Weighbridge UOM"
+  },
+  {
+   "fieldname": "uom_conversion",
+   "fieldtype": "Table",
+   "label": "UOM Conversion",
+   "options": "UOM Conversion"
+  },
+  {
+   "fieldname": "weight_uom_details_section",
+   "fieldtype": "Section Break",
+   "label": "Weight UOM Details"
+  },
+  {
+   "fieldname": "update_conversion_table",
+   "fieldtype": "Button",
+   "label": "Update Conversion table"
+  },
+  {
+   "fieldname": "location",
+   "fieldtype": "Autocomplete",
+   "label": "Location"
+  },
+  {
+   "depends_on": "eval:doc.location;",
+   "fieldname": "branch_details",
+   "fieldtype": "Table",
+   "label": "Branch Details",
+   "options": "Branch Table"
+  },
+  {
+   "fieldname": "update_audio_profiles",
+   "fieldtype": "Button",
+   "label": "Update Audio Profiles"
+  },
+  {
+   "fieldname": "reset_ports",
+   "fieldtype": "Button",
+   "label": "Reset Ports"
+  },
+  {
+   "fieldname": "section_break_rnpv",
+   "fieldtype": "Section Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "table_updated",
+   "fieldtype": "Check",
+   "hidden": 1,
+   "label": "Table Updated"
+  },
+  {
+   "fieldname": "printer_settings_tab",
+   "fieldtype": "Tab Break",
+   "label": "Printer Settings"
+  },
+  {
+   "default": "0",
+   "fieldname": "enable_printing",
+   "fieldtype": "Check",
+   "label": "Enable Printing"
+  },
+  {
+   "depends_on": "eval:doc.enable_printing;",
+   "fieldname": "product_id",
+   "fieldtype": "Data",
+   "label": "Product ID",
+   "mandatory_depends_on": "eval:doc.enable_printing;"
+  },
+  {
+   "depends_on": "eval:doc.enable_printing;",
+   "fieldname": "vendor_id",
+   "fieldtype": "Data",
+   "label": "Vendor ID",
+   "mandatory_depends_on": "eval:doc.enable_printing;"
+  },
+  {
+   "fieldname": "tab_10_tab",
+   "fieldtype": "Tab Break",
+   "label": "Tab 10"
+  },
+  {
+   "default": "0",
+   "fieldname": "enable_maintanance_mode",
+   "fieldtype": "Check",
+   "label": "Enable Maintanance Mode"
+  },
+  {
+   "fieldname": "section_break_cbkg",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_axzn",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "add_permission",
+   "fieldtype": "Button",
+   "label": "Add Permission"
+  },
+  {
+   "fieldname": "check_bell_switch_status",
+   "fieldtype": "Button",
+   "label": "Check Bell Switch Status"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "issingle": 1,
+ "links": [],
+ "modified": "2024-09-14 02:21:18.967673",
+ "modified_by": "Administrator",
+ "module": "Weighment Client",
+ "name": "Weighment Profile",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "print": 1,
+   "read": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

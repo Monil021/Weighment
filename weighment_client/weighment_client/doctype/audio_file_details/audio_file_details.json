@@ -1,0 +1,53 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2024-04-13 08:38:41.164553",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "audio_profile",
+  "column_break_eopt",
+  "audio_file",
+  "is_enabled"
+ ],
+ "fields": [
+  {
+   "fieldname": "audio_profile",
+   "fieldtype": "Autocomplete",
+   "in_list_view": 1,
+   "label": "Audio Profile",
+   "options": "Please put your card on machine\nPlease remove your card\nPress green button for weight\nPlease check platform is blank\nTare weight cant be less than gross weight\nLoad vehicle in platform\nClear platform for next weight\nYour Tare Weight Is\nYour Gross Weight Is\nYour Net Weight Is\nGross Weight Can't Be Zero\nNet Weight Exception\nUsed Token\nContact EDP\nKG\nQuintal\nHuva\nDelivery Exception\nTare Not Done Yet\nGross Weight Can't Be Zero\nsystem_error\nInvalid Token\ncontact_with_sales_department\nneeds_reweight\nButton Press Detected",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_eopt",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "audio_file",
+   "fieldtype": "Attach",
+   "in_list_view": 1,
+   "label": "Audio File"
+  },
+  {
+   "default": "0",
+   "fieldname": "is_enabled",
+   "fieldtype": "Check",
+   "in_list_view": 1,
+   "label": "Is Enabled"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2024-10-01 12:07:01.885410",
+ "modified_by": "Administrator",
+ "module": "Weighment Client",
+ "name": "Audio File Details",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

@@ -1,0 +1,365 @@
+{
+ "actions": [],
+ "autoname": "prompt",
+ "creation": "2024-09-28 14:26:39.824700",
+ "default_view": "List",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "branch",
+  "abbr",
+  "date",
+  "card_number",
+  "location",
+  "entry_type",
+  "vehicle_type",
+  "is_manual_weighment",
+  "is_subcontracting_order",
+  "job_work",
+  "column_break_patz",
+  "company",
+  "time",
+  "vehicle_owner",
+  "driver",
+  "driver_name",
+  "driver_contact",
+  "item_group",
+  "is_weighment_required",
+  "column_break_gnbe",
+  "vehicle",
+  "vehicle_number",
+  "transporter",
+  "transporter_name",
+  "supplier",
+  "supplier_name",
+  "stock_entrys",
+  "purchase_orders",
+  "subcontracting_orders",
+  "section_break_bter",
+  "fetch_stock_entry_details",
+  "stock_entry_details",
+  "section_break_lmtv",
+  "fetch_purchase_details",
+  "items",
+  "enable_weight_adjustment",
+  "section_break_goqh",
+  "fetch_subcontracting_details",
+  "subcontracting_details",
+  "url_details_tab",
+  "url",
+  "connections_tab"
+ ],
+ "fields": [
+  {
+   "fieldname": "branch",
+   "fieldtype": "Autocomplete",
+   "in_list_view": 1,
+   "label": "Branch",
+   "reqd": 1
+  },
+  {
+   "fieldname": "abbr",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "Abbr",
+   "read_only": 1
+  },
+  {
+   "default": "Today",
+   "fieldname": "date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "card_number",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Card Number",
+   "no_copy": 1,
+   "options": "Card Details",
+   "read_only": 1
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "location",
+   "fieldtype": "Data",
+   "label": "Location",
+   "read_only": 1
+  },
+  {
+   "fieldname": "entry_type",
+   "fieldtype": "Select",
+   "label": "Entry Type",
+   "options": "Inward\nOutward",
+   "reqd": 1
+  },
+  {
+   "fieldname": "vehicle_type",
+   "fieldtype": "Autocomplete",
+   "label": "Vehicle Type",
+   "reqd": 1
+  },
+  {
+   "default": "0",
+   "depends_on": "eval:!doc.is_subcontracting_order;",
+   "fieldname": "is_manual_weighment",
+   "fieldtype": "Check",
+   "label": "Is Manual Weighment"
+  },
+  {
+   "default": "0",
+   "depends_on": "eval:doc.entry_type === \"Inward\" && !doc.is_manual_weighment && !doc.job_work;",
+   "fieldname": "is_subcontracting_order",
+   "fieldtype": "Check",
+   "label": "Is Subcontracting Order"
+  },
+  {
+   "default": "0",
+   "depends_on": "eval:!doc.is_subcontracting_order;",
+   "fieldname": "job_work",
+   "fieldtype": "Check",
+   "label": "Job Work"
+  },
+  {
+   "fieldname": "column_break_patz",
+   "fieldtype": "Column Break"
+  },
+  {
+   "depends_on": "eval:doc.branch;",
+   "fetch_from": "branch.company",
+   "fieldname": "company",
+   "fieldtype": "Data",
+   "label": "Company",
+   "read_only": 1
+  },
+  {
+   "default": "now",
+   "fieldname": "time",
+   "fieldtype": "Time",
+   "label": "Time"
+  },
+  {
+   "fieldname": "vehicle_owner",
+   "fieldtype": "Select",
+   "label": "Vehicle Owner",
+   "options": "Company Owned\nThird Party",
+   "reqd": 1
+  },
+  {
+   "depends_on": "eval:doc.vehicle_owner === \"Company Owned\"",
+   "fieldname": "driver",
+   "fieldtype": "Autocomplete",
+   "label": "Driver"
+  },
+  {
+   "fetch_from": "driver.full_name",
+   "fieldname": "driver_name",
+   "fieldtype": "Data",
+   "label": "Driver Name",
+   "reqd": 1
+  },
+  {
+   "depends_on": "eval:doc.driver_name;",
+   "fieldname": "driver_contact",
+   "fieldtype": "Data",
+   "label": "Driver Contact (Mobile No)",
+   "reqd": 1
+  },
+  {
+   "depends_on": "eval:doc.branch && doc.entry_type == \"Outward\" && !doc.job_work && !doc.is_manual_weighment;",
+   "fieldname": "item_group",
+   "fieldtype": "Autocomplete",
+   "label": "Item Group",
+   "mandatory_depends_on": "eval:doc.branch && doc.entry_type == \"Outward\" && !doc.job_work && !doc.is_manual_weighment;"
+  },
+  {
+   "fieldname": "is_weighment_required",
+   "fieldtype": "Select",
+   "label": "Is Weighment Required",
+   "options": "Yes\nNo",
+   "read_only_depends_on": "eval:!doc.job_work"
+  },
+  {
+   "fieldname": "column_break_gnbe",
+   "fieldtype": "Column Break"
+  },
+  {
+   "depends_on": "eval:doc.vehicle_owner!=\"Third Party\"",
+   "fieldname": "vehicle",
+   "fieldtype": "Autocomplete",
+   "label": "Vehicle",
+   "mandatory_depends_on": "eval:doc.vehicle_owner!=\"Third Party\""
+  },
+  {
+   "fieldname": "vehicle_number",
+   "fieldtype": "Data",
+   "label": "Vehicle Number",
+   "mandatory_depends_on": "eval:doc.vehicle_owner==\"Third Party\"",
+   "read_only_depends_on": "eval:doc.vehicle_owner === \"Company Owned\";"
+  },
+  {
+   "depends_on": "eval:doc.vehicle_owner==\"Third Party\"",
+   "fetch_from": ".",
+   "fieldname": "transporter",
+   "fieldtype": "Autocomplete",
+   "label": "Transporter",
+   "mandatory_depends_on": "eval:doc.vehicle_owner==\"Third Party\""
+  },
+  {
+   "depends_on": "eval:doc.vehicle_owner==\"Third Party\";",
+   "fetch_from": ".supplier_name",
+   "fieldname": "transporter_name",
+   "fieldtype": "Data",
+   "label": "Transporter Name",
+   "read_only": 1
+  },
+  {
+   "depends_on": "eval: (\n  (doc.entry_type === \"Inward\" && !doc.is_manual_weighment && !doc.job_work)\n) || (\n  !doc.is_manual_weighment && !doc.engtry_type == \"Outward\" || (doc.is_manual_weighment && doc.job_work)\n);\n",
+   "fetch_from": ".supplier",
+   "fieldname": "supplier",
+   "fieldtype": "Autocomplete",
+   "label": "Supplier",
+   "mandatory_depends_on": "eval:doc.entry_type===\"Inward\" && !doc.is_manual_weighment;"
+  },
+  {
+   "depends_on": "eval:doc.entry_type === \"Inward\";",
+   "fetch_from": ".supplier_name",
+   "fieldname": "supplier_name",
+   "fieldtype": "Data",
+   "label": "Supplier Name",
+   "read_only": 1
+  },
+  {
+   "depends_on": "eval:doc.job_work;",
+   "fieldname": "stock_entrys",
+   "fieldtype": "Table",
+   "label": "Stock Entries",
+   "mandatory_depends_on": "eval:doc.job_work;",
+   "options": "Stock Entrys"
+  },
+  {
+   "depends_on": "eval:doc.entry_type === \"Inward\" && !doc.is_manual_weighment && !doc.is_subcontracting_order && !doc.job_work",
+   "fieldname": "purchase_orders",
+   "fieldtype": "Table",
+   "label": "Purchase Orders",
+   "mandatory_depends_on": "eval:doc.entry_type === \"Inward\" && !doc.is_manual_weighment && !doc.is_subcontracting_order && !doc.job_work;",
+   "options": "Purchase Orders"
+  },
+  {
+   "allow_on_submit": 1,
+   "depends_on": "eval:doc.entry_type === \"Inward\" && !doc.is_manual_weighment && doc.is_subcontracting_order;",
+   "fieldname": "subcontracting_orders",
+   "fieldtype": "Table",
+   "label": "Subcontracting Orders",
+   "mandatory_depends_on": "eval:doc.entry_type === \"Inward\" && !doc.is_manual_weighment && doc.is_subcontracting_order;",
+   "options": "Subcontracting Orders"
+  },
+  {
+   "fieldname": "section_break_bter",
+   "fieldtype": "Section Break"
+  },
+  {
+   "depends_on": "eval:doc.job_work;",
+   "fieldname": "fetch_stock_entry_details",
+   "fieldtype": "Button",
+   "label": "Fetch Stock Entry Details"
+  },
+  {
+   "depends_on": "eval:doc.job_work;",
+   "fieldname": "stock_entry_details",
+   "fieldtype": "Table",
+   "label": "Stock Entry Details",
+   "no_copy": 1,
+   "options": "Stock Entry Details",
+   "read_only": 1
+  },
+  {
+   "fieldname": "section_break_lmtv",
+   "fieldtype": "Section Break"
+  },
+  {
+   "depends_on": "eval:doc.entry_type==\"Inward\" && !doc.is_manual_weighment && !doc.is_subcontracting_order && !doc.job_work;",
+   "fieldname": "fetch_purchase_details",
+   "fieldtype": "Button",
+   "label": "Fetch Purchase Details"
+  },
+  {
+   "depends_on": "eval:doc.entry_type === \"Inward\" && !doc.is_manual_weighment && !doc.is_subcontracting_order && !doc.job_work;",
+   "fieldname": "items",
+   "fieldtype": "Table",
+   "label": "Purchase Details",
+   "no_copy": 1,
+   "options": "Purchase Details"
+  },
+  {
+   "default": "0",
+   "fieldname": "enable_weight_adjustment",
+   "fieldtype": "Check",
+   "hidden": 1,
+   "label": "Enable Weight Adjustment"
+  },
+  {
+   "fieldname": "section_break_goqh",
+   "fieldtype": "Section Break"
+  },
+  {
+   "depends_on": "eval:doc.entry_type === \"Inward\" && !doc.is_manual_weighment && doc.is_subcontracting_order",
+   "fieldname": "fetch_subcontracting_details",
+   "fieldtype": "Button",
+   "label": "Fetch Subcontracting Details"
+  },
+  {
+   "allow_on_submit": 1,
+   "depends_on": "eval:doc.entry_type === \"Inward\" && !doc.is_manual_weighment && doc.is_subcontracting_order",
+   "fieldname": "subcontracting_details",
+   "fieldtype": "Table",
+   "label": "Subcontracting Details",
+   "options": "Subcontracting Details"
+  },
+  {
+   "fieldname": "url_details_tab",
+   "fieldtype": "Tab Break",
+   "label": "URL Details"
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "url",
+   "fieldtype": "Data",
+   "label": "URL",
+   "read_only": 1
+  },
+  {
+   "fieldname": "connections_tab",
+   "fieldtype": "Tab Break",
+   "label": "Connections",
+   "show_dashboard": 1
+  }
+ ],
+ "hide_toolbar": 1,
+ "index_web_pages_for_search": 1,
+ "issingle": 1,
+ "links": [],
+ "modified": "2024-09-28 14:26:39.824700",
+ "modified_by": "Administrator",
+ "module": "Gate Entry",
+ "name": "Gate Entry",
+ "naming_rule": "Set by user",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "print": 1,
+   "read": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

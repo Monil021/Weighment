@@ -1,0 +1,112 @@
+{
+ "actions": [],
+ "allow_import": 1,
+ "allow_rename": 1,
+ "autoname": "field:card_number",
+ "creation": "2024-01-23 09:30:12.515213",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "details_section",
+  "card_number",
+  "hex_code",
+  "column_break_ghaf",
+  "status",
+  "branch",
+  "location",
+  "card_status_section",
+  "is_assigned",
+  "column_break_rkse",
+  "is_updated_on_server"
+ ],
+ "fields": [
+  {
+   "fieldname": "details_section",
+   "fieldtype": "Section Break",
+   "label": "Details"
+  },
+  {
+   "fieldname": "card_number",
+   "fieldtype": "Data",
+   "label": "Card Number",
+   "unique": 1
+  },
+  {
+   "fieldname": "hex_code",
+   "fieldtype": "Data",
+   "label": "Hex Code",
+   "unique": 1
+  },
+  {
+   "fieldname": "column_break_ghaf",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "Issued\nBlank\nAssigned",
+   "read_only": 1
+  },
+  {
+   "fieldname": "card_status_section",
+   "fieldtype": "Section Break",
+   "label": "Card Status"
+  },
+  {
+   "default": "0",
+   "fieldname": "is_assigned",
+   "fieldtype": "Check",
+   "label": "Is Assigned",
+   "read_only": 1
+  },
+  {
+   "fieldname": "branch",
+   "fieldtype": "Autocomplete",
+   "label": "Branch"
+  },
+  {
+   "fieldname": "location",
+   "fieldtype": "Data",
+   "label": "Location"
+  },
+  {
+   "fieldname": "column_break_rkse",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "is_updated_on_server",
+   "fieldtype": "Check",
+   "label": "Is Updated On Server"
+  }
+ ],
+ "in_create": 1,
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2024-07-05 17:37:45.598002",
+ "modified_by": "Administrator",
+ "module": "Weighment Client",
+ "name": "Card Details",
+ "naming_rule": "By fieldname",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

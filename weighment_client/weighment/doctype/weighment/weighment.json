@@ -1,0 +1,447 @@
+{
+ "actions": [],
+ "allow_copy": 1,
+ "allow_rename": 1,
+ "creation": "2024-09-28 14:20:37.559217",
+ "default_view": "List",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "weight_details_section",
+  "column_break_omil",
+  "tare_weight",
+  "column_break_wvhg",
+  "gross_weight",
+  "column_break_yufc",
+  "net_weight",
+  "details_section",
+  "gate_entry_number",
+  "location",
+  "branch",
+  "abbr",
+  "company",
+  "weighment_date",
+  "item_group",
+  "entry_type",
+  "column_break_bmwv",
+  "inward_date",
+  "vehicle_type",
+  "vehicle_owner",
+  "vehicle",
+  "vehicle_number",
+  "driver",
+  "driver_name",
+  "driver_contact",
+  "column_break_ejwp",
+  "outward_date",
+  "transporter",
+  "transporter_name",
+  "supplier",
+  "supplier_name",
+  "reference_record",
+  "is_in_progress",
+  "is_completed",
+  "weight_adjusted",
+  "is_manual_weighment",
+  "is_subcontracting_order",
+  "job_work",
+  "subcontracting_order_details_section",
+  "subcontracting_orders",
+  "subcontracting_details",
+  "purchase_order_details_section",
+  "purchase_orders",
+  "purchase_order_item_details_section",
+  "items",
+  "enable_weight_adjustment",
+  "delivery_note_details_section",
+  "delivery_notes",
+  "delivery_note_details",
+  "section_break_ymbu",
+  "total_weight",
+  "allowed_lower_tolerance",
+  "allowed_upper_tolerance",
+  "column_break_ctgx",
+  "minimum_permissible_weight",
+  "maximum_permissible_weight"
+ ],
+ "fields": [
+  {
+   "fieldname": "weight_details_section",
+   "fieldtype": "Section Break",
+   "label": "Weight Details"
+  },
+  {
+   "fieldname": "column_break_omil",
+   "fieldtype": "Column Break",
+   "read_only": 1
+  },
+  {
+   "fieldname": "tare_weight",
+   "fieldtype": "Float",
+   "label": "Tare Weight (In Kg)",
+   "precision": "2",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_wvhg",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "gross_weight",
+   "fieldtype": "Float",
+   "label": "Gross Weight (In Kg)",
+   "precision": "2",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_yufc",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "net_weight",
+   "fieldtype": "Float",
+   "label": "Net Weight",
+   "precision": "2",
+   "read_only": 1
+  },
+  {
+   "fieldname": "details_section",
+   "fieldtype": "Section Break",
+   "label": "Gate Entry Details"
+  },
+  {
+   "fieldname": "gate_entry_number",
+   "fieldtype": "Data",
+   "label": "Gate Entry Number",
+   "read_only": 1
+  },
+  {
+   "fieldname": "location",
+   "fieldtype": "Data",
+   "label": "Location",
+   "read_only": 1
+  },
+  {
+   "fieldname": "branch",
+   "fieldtype": "Autocomplete",
+   "label": "Branch",
+   "read_only": 1
+  },
+  {
+   "fieldname": "abbr",
+   "fieldtype": "Data",
+   "label": "Abbr",
+   "read_only": 1
+  },
+  {
+   "fieldname": "company",
+   "fieldtype": "Data",
+   "label": "Company",
+   "read_only": 1
+  },
+  {
+   "fieldname": "weighment_date",
+   "fieldtype": "Date",
+   "label": "Weighment Date",
+   "read_only": 1
+  },
+  {
+   "fieldname": "item_group",
+   "fieldtype": "Autocomplete",
+   "label": "Item Group",
+   "read_only": 1
+  },
+  {
+   "fieldname": "entry_type",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Entry Type",
+   "options": "\nInward\nOutward",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_bmwv",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "inward_date",
+   "fieldtype": "Datetime",
+   "label": "Inward Date",
+   "read_only": 1
+  },
+  {
+   "fieldname": "vehicle_type",
+   "fieldtype": "Autocomplete",
+   "label": "Vehicle Type",
+   "read_only": 1
+  },
+  {
+   "depends_on": "eval:doc.gate_entry_number",
+   "fieldname": "vehicle_owner",
+   "fieldtype": "Select",
+   "label": "Vehicle Owner",
+   "options": "Company Owned\nThird Party",
+   "read_only": 1
+  },
+  {
+   "depends_on": "eval:doc.vehicle_owner != \"Third Party\"",
+   "fieldname": "vehicle",
+   "fieldtype": "Autocomplete",
+   "label": "Vehicle",
+   "read_only": 1
+  },
+  {
+   "fieldname": "vehicle_number",
+   "fieldtype": "Data",
+   "label": "Vehicle Number",
+   "read_only": 1
+  },
+  {
+   "fieldname": "driver",
+   "fieldtype": "Autocomplete",
+   "label": "Driver",
+   "read_only": 1
+  },
+  {
+   "fieldname": "driver_name",
+   "fieldtype": "Data",
+   "label": "Driver Name",
+   "read_only": 1
+  },
+  {
+   "fieldname": "driver_contact",
+   "fieldtype": "Data",
+   "label": "Driver Contact",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_ejwp",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "outward_date",
+   "fieldtype": "Datetime",
+   "label": "Outward Date",
+   "read_only": 1
+  },
+  {
+   "depends_on": "eval:doc.vehicle_owner === \"Third Party\";",
+   "fieldname": "transporter",
+   "fieldtype": "Autocomplete",
+   "label": "Transporter"
+  },
+  {
+   "depends_on": "eval:doc.trnasporter",
+   "fieldname": "transporter_name",
+   "fieldtype": "Data",
+   "label": "Transporter Name"
+  },
+  {
+   "fieldname": "supplier",
+   "fieldtype": "Autocomplete",
+   "label": "Supplier",
+   "read_only": 1
+  },
+  {
+   "depends_on": "eval:doc.type==\"Inward\"",
+   "fieldname": "supplier_name",
+   "fieldtype": "Data",
+   "label": "Supplier Name",
+   "read_only": 1
+  },
+  {
+   "fieldname": "reference_record",
+   "fieldtype": "Data",
+   "label": "Reference Record",
+   "read_only": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "is_in_progress",
+   "fieldtype": "Check",
+   "hidden": 1,
+   "label": "Is In Progress",
+   "read_only": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "is_completed",
+   "fieldtype": "Check",
+   "hidden": 1,
+   "label": "Is Completed",
+   "read_only": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "weight_adjusted",
+   "fieldtype": "Check",
+   "hidden": 1,
+   "label": "Weight Adjusted "
+  },
+  {
+   "default": "0",
+   "fieldname": "is_manual_weighment",
+   "fieldtype": "Check",
+   "label": "Is Manual Weighment",
+   "read_only": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "is_subcontracting_order",
+   "fieldtype": "Check",
+   "label": "Is Subcontracting Order",
+   "read_only": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "job_work",
+   "fieldtype": "Check",
+   "label": "Job Work",
+   "read_only": 1
+  },
+  {
+   "fieldname": "subcontracting_order_details_section",
+   "fieldtype": "Section Break",
+   "label": "Subcontracting Order Details"
+  },
+  {
+   "fieldname": "subcontracting_orders",
+   "fieldtype": "Table",
+   "label": "Subcontracting Orders",
+   "options": "Subcontracting Orders",
+   "read_only": 1
+  },
+  {
+   "fieldname": "subcontracting_details",
+   "fieldtype": "Table",
+   "label": "Subcontracting Details",
+   "options": "Subcontracting Details",
+   "read_only": 1
+  },
+  {
+   "fieldname": "purchase_order_details_section",
+   "fieldtype": "Section Break",
+   "label": "Purchase Order Details"
+  },
+  {
+   "fieldname": "purchase_orders",
+   "fieldtype": "Table",
+   "label": "Purchase Orders",
+   "options": "Purchase Orders",
+   "read_only": 1
+  },
+  {
+   "fieldname": "purchase_order_item_details_section",
+   "fieldtype": "Section Break",
+   "label": "Purchase Order Item Details"
+  },
+  {
+   "fieldname": "items",
+   "fieldtype": "Table",
+   "label": "Purchase Order Item",
+   "options": "Purchase Details",
+   "read_only": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "enable_weight_adjustment",
+   "fieldtype": "Check",
+   "hidden": 1,
+   "label": "Enable Weight Adjustment"
+  },
+  {
+   "fieldname": "delivery_note_details_section",
+   "fieldtype": "Section Break",
+   "label": "Delivery Note Details",
+   "read_only": 1
+  },
+  {
+   "depends_on": "eval:doc.entry_type === \"Outward\" && !doc.is_manual_weighment;",
+   "fieldname": "delivery_notes",
+   "fieldtype": "Table",
+   "label": "Delivery Notes",
+   "options": "Delivery Notes",
+   "read_only": 1
+  },
+  {
+   "depends_on": "eval:doc.is_in_progress != 0 && doc.entry_type === 'Outward'",
+   "fieldname": "delivery_note_details",
+   "fieldtype": "Table",
+   "label": "Delivery Note Details",
+   "options": "Delivery Note Details",
+   "read_only": 1
+  },
+  {
+   "fieldname": "section_break_ymbu",
+   "fieldtype": "Section Break"
+  },
+  {
+   "depends_on": "eval:doc.is_in_progress == 1;",
+   "fieldname": "total_weight",
+   "fieldtype": "Float",
+   "label": "Total Weight",
+   "precision": "2",
+   "read_only": 1
+  },
+  {
+   "depends_on": "eval:doc.is_in_progress == 1;",
+   "fieldname": "allowed_lower_tolerance",
+   "fieldtype": "Float",
+   "label": "Allowed Lower Tolerance",
+   "precision": "2",
+   "read_only": 1
+  },
+  {
+   "depends_on": "eval:doc.is_in_progress == 1;",
+   "fieldname": "allowed_upper_tolerance",
+   "fieldtype": "Float",
+   "label": "Allowed Upper Tolerance",
+   "precision": "2",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_ctgx",
+   "fieldtype": "Column Break"
+  },
+  {
+   "depends_on": "eval:doc.allowed_lower_tolerance && doc.is_in_progress != 0;",
+   "fieldname": "minimum_permissible_weight",
+   "fieldtype": "Float",
+   "label": "Minimum Permissible Weight",
+   "precision": "2",
+   "read_only": 1
+  },
+  {
+   "depends_on": "eval:doc.allowed_upper_tolerance && doc.is_in_progress != 0;",
+   "fieldname": "maximum_permissible_weight",
+   "fieldtype": "Float",
+   "label": "Maximum Permissible Weight",
+   "precision": "2",
+   "read_only": 1
+  }
+ ],
+ "hide_toolbar": 1,
+ "index_web_pages_for_search": 1,
+ "issingle": 1,
+ "links": [],
+ "modified": "2024-09-28 14:20:51.283295",
+ "modified_by": "Administrator",
+ "module": "Weighment",
+ "name": "Weighment",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "print": 1,
+   "read": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

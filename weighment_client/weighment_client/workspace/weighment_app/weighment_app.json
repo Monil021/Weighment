@@ -1,0 +1,107 @@
+{
+ "charts": [],
+ "content": "[{\"id\":\"rsk4CxvofH\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\">Weighment App</span>\",\"col\":12}},{\"id\":\"637msGHYnX\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"YrR2nfFQMC\",\"type\":\"card\",\"data\":{\"card_name\":\"Gate Entry\",\"col\":4}},{\"id\":\"IHVp5Xq9Ds\",\"type\":\"card\",\"data\":{\"card_name\":\"Weighment\",\"col\":4}},{\"id\":\"mQjn4Q8UGH\",\"type\":\"card\",\"data\":{\"card_name\":\"Weighment Settings\",\"col\":4}},{\"id\":\"KyiqD1x316\",\"type\":\"spacer\",\"data\":{\"col\":12}}]",
+ "creation": "2024-09-28 15:12:51.452892",
+ "custom_blocks": [],
+ "docstatus": 0,
+ "doctype": "Workspace",
+ "for_user": "",
+ "hide_custom": 0,
+ "icon": "setting-gear",
+ "idx": 0,
+ "indicator_color": "green",
+ "is_hidden": 0,
+ "label": "Weighment App",
+ "links": [
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Gate Entry",
+   "link_count": 1,
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Gate Entry",
+   "link_count": 0,
+   "link_to": "Gate Entry",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Weighment Settings",
+   "link_count": 3,
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Card Read Write",
+   "link_count": 0,
+   "link_to": "Card Read Write",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Card Details",
+   "link_count": 0,
+   "link_to": "Card Details",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Weighment Profile",
+   "link_count": 0,
+   "link_to": "Weighment Profile",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Weighment",
+   "link_count": 1,
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Weighment",
+   "link_count": 0,
+   "link_to": "Weighment",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  }
+ ],
+ "modified": "2024-09-28 15:21:46.844587",
+ "modified_by": "Administrator",
+ "module": "Weighment Client",
+ "name": "Weighment App",
+ "number_cards": [],
+ "owner": "Administrator",
+ "parent_page": "",
+ "public": 1,
+ "quick_lists": [],
+ "roles": [],
+ "sequence_id": 28.0,
+ "shortcuts": [],
+ "title": "Weighment App"
+}

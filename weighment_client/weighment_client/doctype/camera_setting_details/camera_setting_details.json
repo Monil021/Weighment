@@ -1,0 +1,71 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2024-03-28 11:32:18.922393",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "enable",
+  "stream",
+  "camera_name",
+  "camera_ip_address",
+  "camera_admin_password",
+  "camera_user_name"
+ ],
+ "fields": [
+  {
+   "fieldname": "camera_ip_address",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Camera IP Address",
+   "mandatory_depends_on": "eval:doc.enable"
+  },
+  {
+   "fieldname": "camera_admin_password",
+   "fieldtype": "Password",
+   "in_list_view": 1,
+   "label": "Camera Admin Password",
+   "mandatory_depends_on": "eval:doc.enable"
+  },
+  {
+   "default": "0",
+   "fieldname": "enable",
+   "fieldtype": "Check",
+   "in_list_view": 1,
+   "label": "Enable"
+  },
+  {
+   "fieldname": "camera_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Camera Name",
+   "mandatory_depends_on": "eval:doc.enable"
+  },
+  {
+   "fieldname": "stream",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Stream",
+   "mandatory_depends_on": "eval:doc.enable"
+  },
+  {
+   "fieldname": "camera_user_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Camera User Name"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2024-04-26 15:41:40.632796",
+ "modified_by": "Administrator",
+ "module": "Weighment Client",
+ "name": "Camera Setting Details",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

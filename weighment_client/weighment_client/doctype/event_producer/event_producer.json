@@ -1,0 +1,76 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2024-03-22 12:36:20.710131",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "details_section",
+  "url",
+  "column_break_upeb",
+  "api_key",
+  "api_secret",
+  "producer_details_section",
+  "table_knri"
+ ],
+ "fields": [
+  {
+   "fieldname": "details_section",
+   "fieldtype": "Section Break",
+   "label": "Details"
+  },
+  {
+   "fieldname": "url",
+   "fieldtype": "Data",
+   "label": "URL"
+  },
+  {
+   "fieldname": "column_break_upeb",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "producer_details_section",
+   "fieldtype": "Section Break",
+   "label": "Producer Details"
+  },
+  {
+   "fieldname": "table_knri",
+   "fieldtype": "Table",
+   "options": "Event Producer Details"
+  },
+  {
+   "fieldname": "api_key",
+   "fieldtype": "Data",
+   "label": "API Key",
+   "read_only": 1
+  },
+  {
+   "fieldname": "api_secret",
+   "fieldtype": "Password",
+   "label": "API Secret"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "issingle": 1,
+ "links": [],
+ "modified": "2024-03-22 12:44:01.982825",
+ "modified_by": "Administrator",
+ "module": "Weighment Client",
+ "name": "Event Producer",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "print": 1,
+   "read": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}
